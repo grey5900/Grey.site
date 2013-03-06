@@ -1,0 +1,634 @@
+/* ==========================================================================
+  基本样式：自以为是的默认值
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    color: @text-color;
+    font-family: @ff-sans-serif; 
+}
+body, ul, li, p, h1, h2, figure, figcaption {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+strong, b {
+    font-weight: @headings-font-weight;
+}
+a {
+    text-decoration:none;
+    color:@text-color;
+}
+a:hover {
+    text-decoration:underline;
+}
+::-moz-selection {
+ background-color: @background;
+ color:#fff;
+}
+::selection {
+    background-color:  @background;
+    color: #fff;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+img{
+    border:0;
+}
+img::selection {
+    background:transparent;
+}
+img::-moz-selection {
+    background:transparent;
+}
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+textarea {
+    resize: vertical;
+}
+/* ==========================================================================
+   自定义样式
+   ========================================================================== */
+#container {
+    width: 100%;
+    overflow: hidden;
+    background: @body-background;
+}
+#wrapper-nav {
+    width: 100%;
+    background: @text-color;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    .nav {
+        width: 980px;
+        margin: 0 auto;
+        .quick-contact {
+            float: left;
+            color: #fff;
+            line-height: 54px;
+            font-size: @fz-base + 1;
+            a {
+                color: #fff;
+                text-decoration: none;
+                &:hover {
+                    color: #ccc;
+                }
+            }
+            strong.tel {
+                background: url(../img/contact-icons.png) no-repeat left -59px;
+                padding-left: 21px;
+                padding-bottom: 1px;
+                margin-left: 15px;
+                padding-top: 2px;
+            }
+        }
+        .link {
+            float: right;
+            color: #f2f2f2;
+            a {
+                text-decoration: none;
+                color: #f2f2f2;
+                font-family: @ff-black;
+                font-size: 16px;
+                display: inline-block;
+                padding-top: 15px;
+                height: 37px;
+                &:hover {
+                    border-top: 3px solid #F2F2F2;
+                    color: #ccc;
+                    padding-top: 12px;
+                }
+            }
+        }
+    }
+}
+.home {
+    margin: 90px auto 0;
+    width: 980px;
+    .left-column{
+        float: left;
+        width: 420px;
+        height: 512px;
+        position: relative;
+        background: url(../img/O-large.png) no-repeat right;
+        p {
+            color: @text-color;
+            font-size: @fz-base + 8;
+            position: absolute;
+            right: 45px;
+            text-align: center;
+            top: 145px;
+            width: 217px;
+        }
+        strong {
+            font-size: 15px;
+            font-weight: normal;
+            height: 53px;
+            padding-top: 39px;
+            position: absolute;
+            text-align: center;
+            text-transform: capitalize;
+            width: 92px;
+            &.photoshop {
+                background: url("../img/O-small.png") no-repeat scroll center top transparent;
+                right: 20px;
+                top: 17px;
+            }
+            &.html {
+                background: url("../img/O-small.png") no-repeat scroll center top transparent;
+                right: 128px;
+                top: -3px;
+            }
+            &.javascript {
+                background: url("../img/O-small.png") no-repeat scroll center top transparent;
+                right: 230px;
+                top: 33px;
+            }
+            &.jquery {
+                background: url("../img/O-small.png") no-repeat scroll center top transparent;
+                right: 303px;
+                top: 116px;
+            }
+            &.php {
+                background: url("../img/O-small.png") no-repeat scroll center top transparent;
+                right: 323px;
+                top: 222px;
+            }
+            &.asp {
+                background: url("../img/O-small.png") no-repeat scroll center top transparent;
+                right: 293px;
+                top: 326px;
+            }
+        }
+    }
+    .right-column {
+        float: left;
+        position: relative;
+        a {
+            background: url("../img/circle-arrow.png") no-repeat scroll 0 0 transparent;
+            color: #fff;
+            font-size: 20px;
+            height: 130px;
+            padding: 56px 0 0 47px;
+            position: absolute;
+            width: 137px;
+            &.designer {
+                background-position: left top;
+                left: -12px;
+                top: 7px;
+                z-index: 100;
+            }
+            &.developer {
+                background-position: center bottom;
+                right: 0;
+                top: 0;
+            }
+        }
+        .hello {
+            font-size: 240px;
+            line-height: 188px;
+            margin: 210px 0 0;
+            padding: 0;
+            text-shadow: 2px 2px white, 1px 1px #373737;
+        }
+        .article {
+            float: left;
+            font-size: 26px;
+            font-weight: normal;
+            margin: 0;
+            padding-left: 10px;
+            width: 547px;
+        }
+    }
+}
+.about {
+    margin: 0 auto;
+    padding-top: 70px;
+    width: 980px;
+}
+.works {
+    margin: 0 auto;
+    width: 980px;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 55px;
+}
+.contact {
+    margin: 0 auto;
+    width: 980px;
+    padding-top: 90px;
+    padding-bottom: 120px;
+    overflow: hidden;
+}
+.footer {
+    width: 100%;
+    float: left;
+    background: @background;
+    bottom: 0;
+    position: fixed;
+    .wrapper {
+        width: 980px;
+        margin: 0 auto;
+        color: #f7f7f7;
+        font-family: @ff-sans-serif;
+        padding: 12px 0;
+        font-size: 13px;
+        position: relative;
+    }
+}
+.dummy-layer {
+    height: 650px;
+    clear: both;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   帮助类
+   ========================================================================== */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 100%;
+    }
+}
+/*
+ * Hide
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+// Clearfix
+//---------
+
+.clearfix() {
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: block;
+        content: "";
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+// ClearType
+// --------
+.cleartype() {
+    font-family: @font-family-black;
+}
+
+// CSS3 properties
+// -----------
+
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+    -moz-box-shadow: @shadow;
+      -ms-box-shadow: @shadow;
+        box-shadow: @shadow;
+}
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+      -ms-border-radius: @radius;
+          border-radius: @radius;
+}
+.border-bottom-radius(@radius) {
+  border-bottom-right-radius: @radius;
+   border-bottom-left-radius: @radius;
+   -webkit-border-bottom-left-radius: @radius;
+   -webkit-border-bottom-right-radius: @radius;
+}
+.border-top-radius(@radius) {
+  border-top-right-radius: @radius;
+   border-top-left-radius: @radius;
+   -webkit-border-top-right-radius: @radius;
+   -webkit-border-top-left-radius: @radius;
+}
+.vertical(@startColor: #f9f9f9, @endColor: #f1f1f1) {
+  background-color: mix(@startColor, @endColor, 60%);
+  background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+  background-image: linear-gradient(top, @startColor, @endColor); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
+}
+.transform(@radius) {
+  -webkit-transform:@radius;
+  -o-transform:@radius;
+  -moz-transform:@radius;
+  -ms-transform:@radius;
+  transform:@radius;
+}
+.backface-visibility(@radius) {
+  -webkit-backface-visibility:@radius;
+  -moz-backface-visibility:@radius;
+  -ms-backface-visibility:@radius;
+  -o-backface-visibility:@radius;
+  backface-visibility:@radius;
+}
+.transition-duration(@radius){
+  -webkit-transition-duration:@radius;
+  -moz-transition-duration:@radius;
+  -o-transition-duration:@radius;
+  -ms-transition-duration:@radius;
+  transition-duration:@radius;
+}
+.transition-timing-function(@radius){
+  -webkit-transition-timing-function:@radius;
+  -moz-transition-timing-function:@radius;
+  -o-transition-timing-function:@radius;
+  -ms-transition-timing-function:@radius;
+  transition-timing-function:@radius;
+}
+.transform(@radius){
+  -webkit-transform:@radius;
+  -moz-transform:@radius;
+  -ms-transform:@radius;
+  -o-transform:@radius;
+  transform:@radius;
+}
+.reset-filter() {
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}
+
+// 背景
+// ---------
+#gradient {
+  .horizontal(@startColor: #555, @endColor: #333) {
+    background-color: @endColor;
+    background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(to right, @startColor, @endColor); // Standard, IE10
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
+  }
+  .vertical(@startColor: #555, @endColor: #333) {
+    background-color: mix(@startColor, @endColor, 60%);
+    background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(top, @startColor, @endColor); // Standard, IE10
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
+  }
+  .directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
+    background-color: @endColor;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(@deg, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-linear-gradient(@deg, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(@deg, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(@deg, @startColor, @endColor); // Standard, IE10
+  }
+  .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+    background-color: mix(@midColor, @endColor, 80%);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+    background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image: -moz-linear-gradient(top, @startColor, @midColor @colorStop, @endColor);
+    background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-repeat: no-repeat;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
+  }
+  .radial(@innerColor: #555, @outerColor: #333) {
+    background-color: @outerColor;
+    background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
+    background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
+    background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
+    background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
+    background-repeat: no-repeat;
+  }
+  .striped(@color: #555, @angle: 45deg) {
+    background-color: @color;
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255,255,255,.15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255,255,255,.15)), color-stop(.75, rgba(255,255,255,.15)), color-stop(.75, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  }
+}
+
+// Button backgrounds
+// ------------------
+.buttonBackground(@startColor, @endColor, @text-color: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+  color: @text-color;
+  text-shadow: @textShadow;
+  #gradient > .vertical(@startColor, @endColor);
+  border-color: @endColor @endColor darken(@endColor, 15%);
+  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+  .reset-filter();
+
+  // in these cases the gradient won't cover the background, so we override
+  &:hover, &:active, &.active, &.disabled, &[disabled] {
+    color: @text-color;
+    background-color: @endColor;
+  }
+
+  // IE8 can't handle box-shadow to show active, so we darken a bit ourselves
+  &:active,
+  &.active {
+    background-color: darken(@endColor, 10%) e("\9");
+  }
+}
+
+/* ==========================================================================
+   全局变量样式.
+
+   ========================================================================== */
+@body-background:         #f5f5f5;
+@background:              #373737;
+@text-color:              #373737;
+
+@ff-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@ff-serif:       Georgia, "Times New Roman", Times, serif;
+@ff-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+@ff-black:       'Microsoft YaHei','Hiragino Sans GB',Arial,sans-serif;
+
+
+@fz-base:          12px;
+
+@line-height-base:        20px;
+
+@headings-font-family:    inherit; // empty to use BS default, @font-family-base
+@headings-font-weight:    bold;    // instead of browser default, bold
+
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
